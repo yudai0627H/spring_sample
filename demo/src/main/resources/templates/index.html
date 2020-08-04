@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="/callResponse">
+		<input type="text" name="name"><br/>
+		<input type="text" name="tweet"><br/>
+		<button type="submit">送信</button>
+	</form>
+	
+	<div th:if="${response}">
+		<h1 th:text=${response.name}></h1>
+		<h1 th:text=${response.tweet}></h1>
+	</div>
+	
+</body>
+</html>
